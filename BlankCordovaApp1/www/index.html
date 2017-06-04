@@ -1,0 +1,815 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        必要に応じて、次のメタ タグでコンテンツ セキュリティ ポリシーをカスタマイズします。default-src に 'unsafe-inline' を追加して、インライン JavaScript を有効にします。
+        詳細については、http://go.microsoft.com/fwlink/?LinkID=617521 を参照してください。
+    -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        
+        <title>BlankCordovaApp1</title>
+    </head>
+    <body>
+        <!--最初の買い物ページ-->
+        <div data-role="page" id="shopping-start">
+
+            <div data-role="header" class="header">
+                
+                <div><span class="menuBar">メニュー</span><span class="title">買い物</span></div>
+                <!--メニューバー-->
+                <div class="menu-lists">
+                    <ul class="menu-list">
+                        <li><a href="#shopping-start">買い物</a></li>
+                        <li class="menu-finance">家計簿</li>
+                        <li class="memu-refrige">冷蔵庫</li>
+                    </ul>
+                </div>
+            </div>
+
+            
+
+            <div role="main" class="ui-content shopping-start-main">
+                    <div class="start-page">
+                    <p class="first-text">まずは買うものを決めよう！買い忘れ買いすぎに注意！！</p>
+                     <div id="start">買い物リストを作る</div>
+                    </div>
+            </div>
+
+            <footer data-role="footer" data-position="fixed">
+                <h4>お買い物＆家計簿アプリ</h4>
+            </footer>
+
+        </div>
+
+        <!--買い物リストを作るページ-->
+        <div data-role="page" id="making-lists">
+
+            <div data-role="header" class="header">
+
+                <div><span class="menuBar">メニュー</span><span class="title">買い物</span></div>
+                <!--メニューバー-->
+                <div class="menu-lists">
+                    <ul class="menu-list">
+                        <li><a href="#shopping-start">買い物</a></li>
+                        <li class="menu-finance">家計簿</li>
+                        <li class="memu-refrige">冷蔵庫</li>
+                    </ul>
+                </div>
+            </div>
+
+           <div role="main" class="ui-content">
+                    <!--追加したリストが表示される-->
+                    <div id="adding-lists-page">
+                        <div>
+                            <ul class="1 category-title">
+                                野菜
+
+                            </ul>
+
+                        </div>
+                        <div>
+                            <ul class="2 category-title">
+                                生鮮品
+
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="3 category-title">
+                                飲み物
+
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="4 category-title">
+                                お菓子
+
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="5 category-title">
+                                乳製品
+
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="6 category-title">
+                                調味料
+
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="7 category-title">
+                                冷凍食品
+
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="8 category-title">
+                                穀類
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--リスト追加画面-->
+                <footer data-role="footer" class="under-main making-lists-unter" data-position="fixed">
+                    <div id="adding-lists">
+                        <p id="error-adding"></p>
+                        <form id="adding-list">
+                            <div class="name-list">
+                                <div>商品名</div>
+                                <input id="name" type="text" maxlength="15" />
+                            </div>
+                            <div class="nember-list">
+                                <div>どのぐらい？</div>
+                                <input id="nummber" type="number" />
+                                <select id="number-selected">
+                                    <option>個</option>
+                                    <option>g</option>
+                                    <option>kg</option>
+                                    <option>本</option>
+                                    <option>パック</option>
+                                    <option>mL</option>
+                                    <option>L</option>
+                                </select>
+                            </div>
+                            <div class="clear-left"></div>
+                            <div class="categories">
+                                <div>カテゴリー</div>
+                                <select id="category">
+                                    <option value="1">野菜</option>
+                                    <option value="2">生鮮品</option>
+                                    <option value="3">飲み物</option>
+                                    <option value="4">お菓子</option>
+                                    <option value="5">乳製品</option>
+                                    <option value="6">調味料</option>
+                                    <option value="7">冷凍食品</option>
+                                    <option value="8">穀類</option>
+                                </select>
+                            </div>
+                            <div class="clear-left"></div>
+                            <div class="genres">
+                                <div>ジャンルは？</div>
+                                <select id="genre">
+                                    <option value="j1">食費</option>
+                                    <option value="j2">日用品</option>
+                                    <option value="j3">光熱費</option>
+                                    <option value="j4">娯楽費</option>
+                                </select>
+                            </div>
+                            <div class="clear-left"></div>
+                            <div class="check-box">
+                                <label>冷蔵庫にいれますか？<input type="checkbox" id="check" /></label>
+                            </div>
+                            <button type="button" id="adding">リストに追加</button>
+                        </form>
+
+                    </div>
+                    <div class="editing-list">
+                        <div class="adding-units">
+                            <div id="adding-unit">
+                                単位を追加する
+                            </div>
+                            <div id="adding-unit-page">
+                                <p id="error-unit"></p>
+                                <form>
+                                    <div class="tanimei">単位名</div>
+                                    <input id="new-unit" type="text" />
+                                    <button type="button" id="unit-adding">追加</button>
+                                </form>
+                                <div id="adding-unit-close">閉じる</div>
+                            </div>
+                        </div>
+                        <div class="adding-categories">
+                            <div id="adding-category">
+                                カテゴリーを追加する
+                            </div>
+                            <div id="adding-category-page">
+                                <p id="error-category"></p>
+                                <form>
+                                    <div class="catename">カテゴリー名</div>
+                                    <input id="new-category" type="text" />
+                                    <button type="button" id="category-adding">追加</button>
+                                </form>
+                                <div id="adding-category-close">閉じる</div>
+                            </div>
+                        </div>
+                        <div class="adding-genres">
+                            <div id="adding-genre">ジャンルの追加</div>
+                            <div id="adding-genre-page">
+                                <p id="error-genre"></p>
+                                <form>
+                                    <div class="janrunamae">ジャンル名</div>
+                                    <input id="new-genre" type="text"/>
+                                    <button type="button" id="genre-adding">追加</button>
+                                </form>
+                                <div id="adding-genre-page-clode">閉じる</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="go-shopping" class="finish">
+                        完了
+                    </div>
+                </footer>
+            </div>
+
+
+
+        <!--買い物中の画面-->
+        <div data-role="page" id="shopping-lists">
+
+            <div data-role="header" class="header">
+
+                <div><span class="menuBar">メニュー</span><span class="title">買い物</span></div>
+                <!--メニューバー-->
+                <div class="menu-lists">
+                    <ul class="menu-list">
+                        <li><a href="#shopping-start">買い物</a></li>
+                        <li class="menu-finance">家計簿</li>
+                        <li class="memu-refrige">冷蔵庫</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div role="main" class="ui-content">
+                <!--買い物リストが表示。買う買わないボタン付き-->
+                <div class="deleteDiv"><div id="delete-buttom">リストから削除</div></div>
+
+                <div id="shopping-lists-page">
+                    <div class="keulist">買うものリスト</div>
+                    <div>
+                        <ul class="1 category-title">
+                            野菜
+
+                        </ul>
+
+                    </div>
+                    <div>
+                        <ul class="2 category-title">
+                            生鮮品
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="3 category-title">
+                            飲み物
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="4 category-title">
+                            お菓子
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="5 category-title">
+                            乳製品
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="6 category-title">
+                            調味料
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="7 category-title">
+                            冷凍食品
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="8 category-title">
+                            穀類
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <footer data-role="footer" data-position="fixed">
+                <div class="footer-right back-adding">
+                    追加
+                </div>
+
+                <div class="finiSho"><div id="finish-shopping">終了</div></div>
+
+                <div id="amount"><span id="amounts">0</span>円</div>
+               
+                <form id="fixList">
+                    <div id="cancelChange">戻る</div>
+                    <div class="fix-name">
+                        <div>商品名</div>
+                        <input type="text" id="fixName" />
+                    </div>
+                    <div class="fix-price">
+                        <div>値段</div>
+                        <input type="number" id="fixPrice" /><span>円</span>
+                    </div>
+                    <div>
+                        <div>どのくらい？</div>
+                        <input type="number" id="fixNumbers" /><span id="fixUnit"></span>
+                    </div>
+                    <div class="fixArt"></div>
+                    <div class="fixId"></div>
+                    <div class="janru"></div>
+                    <div class="oldNum"></div>
+                    <button type="button" id="fixBuying" class="footer-right">変更</button>
+                </form>
+            </footer>
+        </div>
+
+
+    <!--買うボタンが押されたときの画面-->
+    <div data-role="page" id="buying-page">
+        <!--ヘッダー-->
+        <div data-role="header" class="header">
+
+            <div><span class="menuBar">メニュー</span><span class="title">買い物</span></div>
+            <!--メニューバー-->
+            <div class="menu-lists">
+                <ul class="menu-list">
+                    <li><a href="#shopping-start">買い物</a></li>
+                    <li class="menu-finance">家計簿</li>
+                    <li class="memu-refrige">冷蔵庫</li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div id="bought-page">
+                <div id="bought-lists-page">
+                    <div class="keulist">買ったものリスト(金額は税込み表示)</div>
+                    <div>
+                        <ul class="1 category-title">
+                            野菜
+
+                        </ul>
+
+                    </div>
+                    <div>
+                        <ul class="2 category-title">
+                            生鮮品
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="3 category-title">
+                            飲み物
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="4 category-title">
+                            お菓子
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="5 category-title">
+                            乳製品
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="6 category-title">
+                            調味料
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="7 category-title">
+                            冷凍食品
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="8 category-title">
+                            穀類
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        <!--メイン終わり-->
+        </div>
+
+        <footer data-role="footer" data-position="fixed">
+            <div class="footer-left"><div id="zruck">戻る</div></div>
+
+            <p id="error-buying"></p>
+            <form class="buying-form">
+                <div class="names">
+                    <div>商品名</div>
+                    <input type="text" id="goodsName"/>
+                </div>
+                <div class="prices">
+                    <div>値段    税込み<input type="checkbox" data-role="flipswitch" id="switch"/></div>
+                    <input type="number" id="price" /><span>円</span>
+                </div>
+                <div>
+                    <div>どのくらい？</div>
+                    <input type="number" id="goodsNumbers" /><span id="goodsUnit"></span>
+                </div>
+                <div class="art"></div>
+                <div class="id"></div>
+                <button type="button" id="thanks-buying" class="footer-right">買う</button>
+            </form>
+
+            
+        </footer>
+    <!--ぺージ終わり-->
+    </div>
+
+
+
+
+    <!--家計簿画面-->
+    <div data-role="page" id="finance">
+
+        <div data-role="header" class="header">
+
+            <div><span class="menuBar">メニュー</span><span class="title">家計簿</span></div>
+            <!--メニューバー-->
+            <div class="menu-lists">
+                <ul class="menu-list">
+                    <li><a href="#shopping-start">買い物</a></li>
+                    <li class="menu-finance">家計簿</li>
+                    <li class="memu-refrige">冷蔵庫</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--メイン-->
+        <!--家計簿のテンプレート-->
+        <div id="fin-templetes">
+            <div id="fin-templete-genre">
+                
+                    <div class="j1 fin-genre">食費<div class="fin-j1 jenreMoney"><span class="jenre-money">0</span>円</div>
+                        
+                    </div>
+                
+                
+                    <div class="j2 fin-genre">日用品<div class="fin-j2 jenreMoney"><span class="jenre-money">0</span>円</div>
+                        
+                    </div>
+                
+                
+                    <div class="j3 fin-genre">光熱費<div class="fin-j3 jenreMoney"><span class="jenre-money">0</span>円</div>
+                        
+                    </div>
+                
+                
+                    <div class="j4 fin-genre">娯楽費<div class="fin-j4 jenreMoney"><span class="jenre-money">0</span>円</div>
+                        
+                    </div>
+            </div>
+
+            <div id="fin-templete-category">
+                <div>
+                    <ul class="1 category-title">野菜
+
+                    </ul>
+
+                </div>
+                <div>
+                    <ul class="2 category-title">
+                        生鮮品
+
+                    </ul>
+                </div>
+                <div>
+                    <ul class="3 category-title">
+                        飲み物
+
+                    </ul>
+                </div>
+                <div>
+                    <ul class="4 category-title">
+                        お菓子
+
+                    </ul>
+                </div>
+                <div>
+                    <ul class="5 category-title">
+                        乳製品
+
+                    </ul>
+                </div>
+                <div>
+                    <ul class="6 category-title">
+                        調味料
+
+                    </ul>
+                </div>
+                <div>
+                    <ul class="7 category-title">
+                        冷凍食品
+
+                    </ul>
+                </div>
+                <div>
+                    <ul class="8 category-title">
+                        穀類
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+        <div role="main" class="ui-content">
+            <!--累計表示-->
+            <div id="beforeFinance">
+
+            </div>
+            <!--編集用ページ-->
+            <div id="finEditPage">
+                <div id="finEditBack">戻る</div>
+                <form id="finEditForm">
+                    <div>
+                        <div>商品名</div>
+                        <input type="text" id="finEditFormName"/>
+                    </div>
+                    <div>
+                        <div>どのくらい</div>
+                        <div id="finEditFormNum"></div><span id="finEditFormUnit"></span>
+                    </div>
+                    <div>
+                        <div>金額</div>
+                        <input type="number" id="finEditFormGeld"/>円
+                    </div>
+                    <button type="button" class="footer-right" id="finEditFormButtom">変更</button>
+                </form>
+                <div id="beforeGeldMoney"></div>
+                <div id="changeOruNumber"></div>
+            </div>
+
+
+            <div id="finMain">
+                <div>買いすぎはないですか？</div>
+
+                <div class="today-fin 20170101101010 fin-example"><div class="date">2017/<span class="tuki">01</span>/01</div></div>
+            </div>
+
+         </div><!--メイン終わり-->
+
+        
+        <div data-role="footer" data-position="fixed" class="fin-footer">
+            <div id="finDelete">削除</div>
+            <div id="finEdit">編集</div>
+            <div id="Month"><span id="monthDeteil">今月</span><span class="MonthAmount">0</span>円
+                <div class="month-Details">
+                    <div class="j1 fin-genre">
+                        食費<div class="fin-j1 jenreMoney"><span class="jenre-money">0</span>円</div>
+
+                    </div>
+
+
+                    <div class="j2 fin-genre">
+                        日用品<div class="fin-j2 jenreMoney"><span class="jenre-money">0</span>円</div>
+
+                    </div>
+
+
+                    <div class="j3 fin-genre">
+                        光熱費<div class="fin-j3 jenreMoney"><span class="jenre-money">0</span>円</div>
+
+                    </div>
+
+
+                    <div class="j4 fin-genre">
+                        娯楽費<div class="fin-j4 jenreMoney"><span class="jenre-money">0</span>円</div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="before">累計</div>
+            <div id="finAdd">
+                <div id="finAddButtom">追加</div>
+                <div class="finAdd-page">
+                    <div class="clear-left"></div>
+                    <form id="finAddForm">
+                        <div class="finAdd-name">
+                            <div>名前</div>
+                            <input type="text" id="finAddName"/>
+                        </div>
+                        <div class="finAdd-price">
+                            <div>値段</div>
+                            <input type="number" id="finAddPrice"/><span>円</span>
+                        </div>
+                        <div class="finAdd-nummber">
+                            <div>個数</div>
+                            <input type="number" id="finAddNummber"/>
+                            <select id="finAddUnit">
+                                <option>個</option>
+                                <option>g</option>
+                                <option>kg</option>
+                                <option>本</option>
+                                <option>パック</option>
+                                <option>mL</option>
+                                <option>L</option>
+                            </select>
+                        </div>
+                        <div class="finAdd-category">
+                            <div>カテゴリー</div>
+                            <select id="finAddCategory">
+                                <option value="1">野菜</option>
+                                <option value="2">生鮮品</option>
+                                <option value="3">飲み物</option>
+                                <option value="4">お菓子</option>
+                                <option value="5">乳製品</option>
+                                <option value="6">調味料</option>
+                                <option value="7">冷凍食品</option>
+                                <option value="8">穀類</option>
+                            </select>
+                        </div>
+                        <div class="finAdd-genre">
+                            <div>ジャンル</div>
+                            <select id="finAddGenre">
+                                <option value="j1">食費</option>
+                                <option value="j2">日用品</option>
+                                <option value="j3">光熱費</option>
+                                <option value="j4">娯楽費</option>
+                            </select>
+                        </div>
+                        <div class="fin-check-box">
+                            <label>冷蔵庫にいれますか？<input type="checkbox" id="finCheck" /></label>
+                        </div>
+                        <button type="button" id="finAddButton" class="footer-right">追加</button>
+                    </form>
+                    <div id="finAddBack">戻る</div>
+                </div>
+            </div>
+        </div><!--footer終わり-->
+    </div><!--家計簿ページ終わり-->
+    
+
+    <!--冷蔵庫画面-->
+    <div data-role="page" id="refrigerator">
+
+        <div data-role="header" class="header">
+
+            <div><span class="menuBar">メニュー</span><span class="title">冷蔵庫</span></div>
+            <!--メニューバー-->
+            <div class="menu-lists">
+                <ul class="menu-list">
+                    <li><a href="#shopping-start">買い物</a></li>
+                    <li class="menu-finance">家計簿</li>
+                    <li class="memu-refrige">冷蔵庫</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--メイン画面-->
+        <div role="main" class="ui-content">
+
+            <!--使う画面-->
+            <div id="carryOnUse">
+                <div id="cancelUse">戻る</div>
+                <div id="error-using"></div>
+                <form id="usingForm">
+                    <div>
+                        <div>名前</div>
+                        <div id="usingFormName"></div>
+                    </div>
+                    <div>
+                        <div>どのくらい使いますか</div>
+                        <input type="number" id="usingFormNum" /><span id="usingFormUnit"></span>
+                    </div>
+                    <button type="button" id="usingFormButtom" class="footer-right">使う</button>
+                </form>
+
+                <div id="beforeUseNum"></div>
+            </div>
+
+            <!--追加画面-->
+            <div id="refAddPage">
+                <div id="cancelRefAdd">戻る</div>
+                <div id="error-refAdd"></div>
+                <form id="refAddForm">
+                    <div>
+                        <div>名前</div>
+                        <input type="text" id="refAddFormName"/>
+                    </div>
+                    <div>
+                        <div>どのくらい？</div>
+                        <input type="number" id="refAddFormNum"/>
+                        <select id="refAddFormUnit">
+                            <option>個</option>
+                            <option>g</option>
+                            <option>kg</option>
+                            <option>本</option>
+                            <option>パック</option>
+                            <option>mL</option>
+                            <option>L</option>
+                        </select>
+                    </div>
+                    <div>
+                        <div>カテゴリー</div>
+                        <select id="refAddFormCategory">
+                            <option value="1">野菜</option>
+                            <option value="2">生鮮品</option>
+                            <option value="3">飲み物</option>
+                            <option value="4">お菓子</option>
+                            <option value="5">乳製品</option>
+                            <option value="6">調味料</option>
+                            <option value="7">冷凍食品</option>
+                            <option value="8">穀類</option>
+                        </select>
+                    </div>
+                    <button type="button" id="refAddFormButtom">追加</button>
+                </form>
+            </div>
+            <!--リスト-->
+            <div id="refrigeratorLists">
+                <div>
+                    <ul class="1 category-title">
+                        野菜
+
+                    </ul>
+
+                </div>
+                <div>
+                    <ul class="2 category-title">
+                        生鮮品
+
+                    </ul>
+                </div>
+                <div>
+                    <ul class="3 category-title">
+                        飲み物
+
+                    </ul>
+                </div>
+                <div>
+                    <ul class="4 category-title">
+                        お菓子
+
+                    </ul>
+                </div>
+                <div>
+                    <ul class="5 category-title">
+                        乳製品
+
+                    </ul>
+                </div>
+                <div>
+                    <ul class="6 category-title">
+                        調味料
+
+                    </ul>
+                </div>
+                <div>
+                    <ul class="7 category-title">
+                        冷凍食品
+
+                    </ul>
+                </div>
+                <div>
+                    <ul class="8 category-title">
+                        穀類
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div data-role="footer" data-position="fixed" class="refrigerator-footer">
+            <div class="use-buttom-squere">
+                <div class="benutzen">使う</div>
+            </div>
+            <div class="link-to-cookpad"><a href="http://cookpad.com/?utm_source=link_banner&utm_medium=link_banner&utm_content=bnr88x31" target="_blank">メニューを探す</a></div>
+            <div id="refAdd">追加</div>
+            <div class="delete-buttom-squere">
+                <div class="use-delete">削除</div>
+            </div>
+        </div>
+
+        </div><!--冷蔵庫画面終わり-->
+
+
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script src="scripts/jquery-1.8.0.min.js"></script>
+        <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,715 @@
+/*shopping-start*/
+
+/*header*/
+.header {
+    width:100%;
+    font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    float:left;
+}
+/*メニューアイコン*/
+.menuBar {
+    float: left;
+    color: navy;
+    font-size: large;
+    padding-top: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.menuBar:hover {
+    background-color: chartreuse;
+}
+
+/*メニューバー*/
+.menu-list li {
+    float: left;
+    margin-left: 30px;
+    list-style: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.menu-list li:hover {
+    background-color: chartreuse;
+}
+
+/*買い物の文字*/
+.title {
+    padding-left: 65px;
+    font-size: xx-large;
+}
+/*main*/
+
+.start-page {
+    text-align: center;
+}
+.first-text{
+    font-size:25px;
+}
+#start {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #89ce89;
+    box-shadow: 0px 5px #145a16;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 50px;
+    width: 50%;
+    margin: 130px auto;
+    height: 40%;
+}
+
+.menu-list{
+    display:none;
+}
+
+/*making-list*/
+/*リストが追加されるページ*/
+
+
+#adding-lists-page {
+    height: 200px;
+}
+.aa{
+    height:500px;
+}
+
+.category-title {
+    border-bottom: 2px solid #41b8a4;
+}
+
+/*リスト追加ページ*/
+.making-lists-unter {
+    
+}
+
+#error-adding {
+    color: red;
+}
+
+#adding-lists {
+    float: left;
+    width: 50%;
+    font-size:small;
+}
+
+.editing-list{
+    float:right;
+    width:40%;
+}
+
+#adding-list .name-list {
+    display:inline-block;
+    float:left;
+}
+
+#name{
+    width:70px;
+}
+
+.nember-list {
+    display: inline-block;
+    float: left;
+    margin-left:10px;
+}
+
+#nummber {
+    width: 70px;
+}
+
+
+.clear-left{
+    clear:left;
+}
+.categories {
+    display: inline-block;
+    float: left;
+}
+
+.genres {
+    display: inline-block;
+    float: left;
+}
+/*単位追加ページ*/
+.adding-units {
+    margin-bottom: 10px;
+}
+
+#adding-unit {
+    border-bottom:3px solid #0a58fa;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#adding-unit-page {
+    display: none;
+}
+
+#error-unit{
+    color:red;
+}
+
+#adding-unit-close {
+    transition: all 0.5s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#adding-unit-close:hover {
+    background-color: chartreuse;
+}
+
+.tanimei {
+    font-size: small;
+}
+
+#new-unit {
+    width: 80px;
+}
+
+/*カテゴリー追加*/
+#adding-category {
+    border-bottom: 3px solid #0a58fa;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#error-category {
+    color:red;
+}
+
+#adding-category-page {
+    display: none;
+}
+
+.catename {
+    font-size:small;
+}
+
+#adding-category-close {
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#adding-category-close:hover {
+    background-color: chartreuse;
+}
+/*ジャンル追加ページ*/
+#adding-genre-page {
+    display: none;
+}
+
+.error-genre{
+    color:red;
+}
+
+#adding-genre {
+    border-bottom: 3px solid #0a58fa;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.janrunamae {
+    font-size: small;
+}
+
+#adding-genre-page-clode {
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#adding-genre-page-clode:hover {
+    background-color: chartreuse;
+}
+    /*完了ボタン*/
+#go-shopping {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #89ce89;
+    box-shadow: 0px 5px #145a16;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    width: 20%;
+    margin: 20px 20px;
+    height: 20%;
+    text-align: center;
+}
+
+.finish {
+    background-color: #89ce89;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.category-title{
+    display:none
+}
+
+/*買い物リスト　買う買わないボタン付き*/
+
+
+.keulist {
+    border-bottom: 3px solid #0a58fa;
+}
+
+#delete-buttom {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #3dc1af;
+    box-shadow: 0px 5px #145a16;
+    border-radius: 8px;
+}
+
+.point {
+    list-style: none;
+    padding-bottom:10px;
+}
+
+.kau {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #dce388;
+    box-shadow: 0px 5px #cfce88;
+    border-radius: 8px;
+    color: #3b98ce;
+}
+
+.en{
+    display:none;
+}
+
+.footer-right {
+    float:right;
+}
+
+.back-adding {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #89ce89;
+    border-radius: 8px;
+    color: #100101;
+}
+
+#finish-shopping {
+    float: left;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #89ce89;
+    border-radius: 8px;
+    color: #0f0202;
+}
+
+#amount {
+    float: left;
+    margin-left: 120px;
+}
+
+#delete {
+    display: inline-block;
+    cursor: pointer;
+    background-color: palegreen;
+    box-shadow: 0px 5px #279C56;
+    border-radius: 3px;
+    color: #fff;
+}
+
+
+.delete {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #3dc1af;
+    box-shadow: 0px 5px #145a16;
+    border-radius: 8px;
+}
+
+#kaufen {
+    display: inline-block;
+}
+
+.gekauft {
+    cursor: pointer;
+    background-color: #9095c8;
+    border-radius: 8px;
+    color: #040422;
+}
+
+.art{
+    display:none;
+}
+
+.id{
+    display:none;
+}
+
+.sorte{
+    display:none;
+}
+
+.janru{
+    display:none;
+}
+
+.oldNum{
+    display:none;
+}
+/*買うボタンが押された画面*/
+#zruck {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#zruck:hover {
+    background-color: chartreuse;
+}
+
+.footer-left {
+    float: left;
+}
+
+.buying-form{
+    clear:left;
+    padding-top:20px;
+}
+
+#price {
+    width: 100px;
+}
+
+#goods-numbers{
+    width:100px;
+}
+
+#thanks-buying {
+    cursor: pointer;
+    background-color: #89ce89;
+    box-shadow: 0px 5px #145a16;
+    border-radius: 8px;
+    color: #fff;
+}
+
+
+#error-buying {
+    color: red;
+}
+
+/*終了が押されたとき*/
+#fixList{
+    display:none;
+    clear:left;
+}
+
+.chaKauft {
+    cursor: pointer;
+    background-color: #957fa2;
+    box-shadow: 0px 5px #884c6a;
+    border-radius: 8px;
+    color: #110101;
+}
+
+.owari {
+    display:inline-block;
+    cursor: pointer;
+    background-color: #89ce89;
+    box-shadow: 0px 5px #145a16;
+    border-radius: 8px;
+    color: #fff;
+}
+
+
+/*編集が押された画面*/
+#fixList{
+    padding-top:15px;
+}
+
+#cancelChange {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#cancelChange:hover {
+    background-color: chartreuse;
+}
+/*買い物最終画面*/
+.fixArt {
+    display: none;
+}
+
+.fixId{
+    display:none;
+}
+
+/*家計簿画面*/
+
+
+/*累計画面*/
+#beforeFinance {
+    border-bottom: 2px solid #60b85a;
+    z-index: 100;
+    display: none;
+}
+
+/*追加ページ*/
+.finAdd-page {
+    display: none;
+}
+
+/*テンプレート*/
+#fin-templete-genre{
+    display:none;
+}
+
+#fin-templete-category{
+    display:none;
+}
+
+.fin-example{
+    display:none;
+}
+/*その日その時間の家計簿*/
+.today-fin {
+    padding-top: 10px;
+    border-bottom: 2px solid #819c57;
+}
+
+.date {
+    border: 2px solid #b25f21;
+}
+/*家計簿footer*/
+.fin-footer{
+    float:left;
+}
+
+#finDelete {
+    display: inline-block;
+    margin-left: 15px;
+    cursor: pointer;
+    background-color: #3dc1af;
+    box-shadow: 0px 5px #145a16;
+    border-radius: 8px;
+    margin-bottom:15px;
+}
+
+#finEdit {
+    display: inline-block;
+    margin-left: 15px;
+    cursor: pointer;
+    background-color: #957fa2;
+    box-shadow: 0px 5px #884c6a;
+    border-radius: 8px;
+    color: #110101;
+    margin-bottom: 15px;
+}
+
+#Month {
+    display: inline-block;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+#before {
+    display: inline-block;
+    margin-left: 15px;
+    cursor: pointer;
+    background-color: #b87474;
+    box-shadow: 0px 5px #a17668;
+    border-radius: 8px;
+    color: #110101;
+    margin-bottom: 15px;
+}
+
+#finAdd {
+    display: inline-block;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+#finAddButtom {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #89ce89;
+    border-radius: 8px;
+    color: #100101;
+    margin-bottom: 15px;
+}
+
+/*累計*/
+.comulative {
+    border-bottom: 2px solid #41b8a4;
+}
+/*編集ページ*/
+.fin-edit-buttom {
+    cursor: pointer;
+    background-color: #957fa2;
+    box-shadow: 0px 5px #884c6a;
+    border-radius: 8px;
+    color: #110101;
+}
+
+#finEditPage {
+    display: none;
+    z-index: 100;
+}
+
+.fin-edit-buttom{
+    display:inline-block;
+}
+
+#beforeGeldMoney{
+    display:none;
+}
+
+#finEditBack {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#finEditBack:hover {
+    background-color: chartreuse;
+}
+
+#finEditFormNum{
+    display:inline-block;
+}
+
+#changeOruNumber{
+    display:none;
+}
+/*削除ページ*/
+.fin-delete-buttom {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #3dc1af;
+    box-shadow: 0px 5px #145a16;
+    border-radius: 8px;
+}
+
+
+/*家計簿詳細*/
+.month-Details {
+    float: left;
+}
+
+#monthDeteil {
+    display: inline-block;
+    margin-left: 15px;
+    border-bottom: 2px solid #41b8a4;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.fin-genre {
+    display: none;
+}
+
+.jenreMoney{
+    display:inline-block;
+}
+
+.month-Details {
+    display: none;
+}
+
+/*追加ページ*/
+#finAddBack {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#finAddBack:hover {
+    background-color: chartreuse;
+}
+
+/*冷蔵庫*/
+.use-buttom-squere {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.benutzen {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #a5a96e;
+    box-shadow: 0px 5px #90934a;
+    border-radius: 8px;
+    
+}
+
+.link-to-cookpad {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+#refAdd {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #89ce89;
+    border-radius: 8px;
+    color: #100101;
+    margin-left: 30px;
+}
+
+.delete-buttom-squere {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.use-delete {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #3dc1af;
+    box-shadow: 0px 5px #145a16;
+    border-radius: 8px;
+}
+/*使うボタン実装*/
+.using {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #a5a96e;
+    box-shadow: 0px 5px #90934a;
+    border-radius: 8px;
+}
+
+/*削除ボタン*/
+.deleting {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #3dc1af;
+    box-shadow: 0px 5px #145a16;
+    border-radius: 8px;
+}
+
+#carryOnUse {
+    display: none;
+}
+
+/*使う画面*/
+#cancelUse {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#cancelUse:hover {
+    background-color: chartreuse;
+}
+
+#beforeUseNum{
+    display:none;
+}
+
+/*追加画面*/
+#refAddPage {
+    display: none;
+}
+
+#cancelRefAdd {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#cancelRefAdd:hover {
+    background-color: chartreuse;
+}
